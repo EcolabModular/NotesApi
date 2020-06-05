@@ -29,7 +29,7 @@ class NoteController extends Controller
     {
         $Notes = Note::all();
 
-        return $this->successResponse($Notes);
+        return $this->showAll($Notes);
     }
 
     /**
@@ -38,7 +38,7 @@ class NoteController extends Controller
      */
     public function notesItem($item){
         $Notes = Note::where('item_id',$item)->get();
-        return $this->successResponse($Notes);
+        return $this->showAll($Notes);
     }
 
     /**
