@@ -19,7 +19,7 @@ use Faker\Generator as Faker;
 $factory->define(Note::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
-        'description' => $faker->paragraph(3),
+        'description' => $faker->paragraph(6),
         'item_id' => $faker->numberBetween(1,20)
     ];
 });
